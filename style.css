@@ -116,5 +116,37 @@ header {
     margin: auto;
 }
 
+.moveLeft {
+    animation-name: moveLeft;
+    animation-duration: 2s;
+}
+
+.moveRight {
+    animation-name: moveRight;
+    animation-duration: 3s;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translate(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translate(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
 
 /* End of mission */
