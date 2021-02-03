@@ -38,4 +38,18 @@ $(document).ready(function() {
     $('.gallery-list-item').click(function(){
         $(this).addClass('active-item').siblings().removeClass('active-item');
     });
+
+    $(window).scroll(function(){
+        let position = $(this).scrollTop();
+        if(position>=4100){
+            $('.card-1').addClass('movefromLeft')
+            $('.card-3').addClass('movefromRight')
+            $('.card-2').addClass('movefromBottom')
+        }
+        else{
+            $('.card-1').removeClass('movefromLeft')
+            $('.card-3').removeClass('movefromRight')
+            $('.card-2').removeClass('movefromBottom')
+        }
+    });
 });
